@@ -24,16 +24,14 @@
 
 <ion-content padding>
  <!-- Real floating action button, fixed. It will not scroll with the content -->
-  <div class="subcategory">
+  <div class="subcategories-wrapper">
     <ion-list>
-      <button ion-item *ngFor="let item of subCategorylist" (click)="viewExpensesDetail(item)">
-        <ion-avatar item-start>
-          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-woody.png">
-        </ion-avatar>
-        
-        <h3>{{ item.nombre }}</h3>
-        <p>I've had a pretty messed up day. If we just...</p>
-        <button ion-button clear item-end>Go</button>
+      <button class="subcategory" ion-item *ngFor="let item of subCategorylist" (click)="viewExpensesDetail(item)">
+        <div class="subcategory__description">
+          <h3>{{ item.nombre }}</h3>
+          <span>S/24.00</span>
+        </div>
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
       </button>
     </ion-list>
   </div>
