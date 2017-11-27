@@ -54,6 +54,7 @@ page-expense-category {
 
             .title {
                 font-size: 16px;
+                text-transform: uppercase;
             }
 
             ion-icon {
@@ -82,17 +83,22 @@ page-expense-category {
                         background-color: rgb(25, 94, 83);
                         border-radius: 50%;
                         margin-right: 12px;
-                        height: 30px;
-                        width: 30px;
+                        height: 40px;
+                        width: 40px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        color: rgba(255,255,255,0.25);
                     }
 
-                    span:last-child {
+                    span.name {
+                        color: rgba(255, 255, 255, 0.75);
+                    }
+
+                    span.amount {
                         position: absolute;
                         right: 0;
-                        color: $amber-500;
+                        color: $amber-600;
                         font-size: 14px;
                         font-weight: bold;
                     }
@@ -102,9 +108,11 @@ page-expense-category {
                     color: $amber-900;
                     display: flex;
                     align-items: center;
+                    margin-top: 0;
+                    margin-bottom: 0;
 
                     &::before {
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                 }
             }

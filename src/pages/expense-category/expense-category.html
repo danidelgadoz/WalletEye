@@ -16,7 +16,7 @@
 <ion-content padding>
   <div class="header">
     <img src="assets/imgs/carita-feliz.png.png" alt="">
-    <span class="header__title">Bienvenido Daniel!</span>
+    <span class="header__title">Hola</span>
     <span class="header__message">
         <ion-icon name="ios-eye-outline"></ion-icon>
         Mostrar gastos
@@ -25,16 +25,16 @@
   
   <div class="categorias">
     <div class="categorias__header">
-      <div class="title">CATEGORIAS</div>
+      <div class="title">CATEGORIA DE GASTOS</div>
       <ion-icon name="ios-arrow-dropright"></ion-icon>
     </div>
 
     <div class="categorias__list">
       <ion-list no-lines>
         <button ion-item *ngFor="let category of categories" (click)="goTo(category)">
-          <div class="bullet">C</div>
-          <span>{{ category.nombre }}</span>
-          <span>S/24.00</span>
+          <div class="bullet">{{ category.nombre | slice:0:1 }}</div>
+          <span class="name">{{ category.nombre }}</span>
+          <span class="amount">S/24.00</span>
           <ion-icon name="ios-arrow-forward" item-end></ion-icon>
         </button> 
       </ion-list>
