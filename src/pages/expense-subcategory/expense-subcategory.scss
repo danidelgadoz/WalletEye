@@ -1,4 +1,14 @@
 page-expense-subcategory {
+
+    ion-header ion-toolbar ion-buttons {
+        order: 1 !important;
+    }
+    ion-header ion-toolbar button {
+        margin: 0 6px !important;
+        min-width: 44px !important;
+        color: #fff !important;
+    }
+
     .subcategories-wrapper {
         margin-top: 8px;
 
@@ -15,7 +25,10 @@ page-expense-subcategory {
                     justify-content: center;
                     align-items: flex-start;
 
-                    span {
+                    .name {
+                        margin: 0;
+                    }
+                    .amount {
                         color: $amber-500;
                         font-size: 14px;
                     }

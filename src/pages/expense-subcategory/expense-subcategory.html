@@ -4,22 +4,21 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<!-- <ion-header >
-  <ion-toolbar primary>
-      <ion-buttons start>
-        <button ion-button icon-only>
-          <ion-icon name="more"></ion-icon>
-        </button>
-      </ion-buttons>
-    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+<ion-header>
+  <ion-toolbar color="primary">  
+    <button clear icon-only ion-button (click)="goBackToCategories()">
+      <ion-icon name="md-arrow-back"></ion-icon>
+    </button>
+      
+    <!-- <ion-searchbar (input)="getItems($event)"></ion-searchbar> -->
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
-<ion-header>  
+<!-- <ion-header style="display: none">  
   <ion-navbar color="primary">
     <ion-title></ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 
 <ion-content padding>
@@ -28,8 +27,8 @@
     <ion-list>
       <button class="subcategory" ion-item *ngFor="let item of subCategorylist" (click)="viewExpensesDetail(item)">
         <div class="subcategory__description">
-          <h3>{{ item.nombre }}</h3>
-          <span>S/24.00</span>
+          <h3 class="name">{{ item.nombre }}</h3>
+          <span class="amount">S/24.00</span>
         </div>
         <ion-icon name="ios-arrow-forward" item-end></ion-icon>
       </button>
