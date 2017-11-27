@@ -9,4 +9,77 @@ page-expense-detail {
             color: gray;
         }
     }
+
+    .expenses-wrapper {
+        margin-top: 8px;
+
+        ion-list button.expense {
+            ion-label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                margin: 13px 16px 13px 0;
+                white-space: unset;
+
+                .expense__category {
+                    background-color: rgb(25, 94, 83);
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    height: 30px;
+                    max-width: 30px;
+                    min-width: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $amber-500;
+                    color: $default-color;
+                }
+
+                .expense__description{
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $grey-800;
+                    font-size: 14px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin: 0;
+                    margin-right: 16px;
+                }
+
+                div {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    span.expense__amount {
+                        color: $red-500;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin-bottom: 2px;
+                    }
+
+                    span.expense__date {
+                        color: $grey-500;
+                        font-size: 12px;
+                    }
+                }                
+            }
+
+            ion-icon {
+                color: $amber-900;
+                display: flex;
+                align-items: center;
+                margin-top: 0;
+                margin-bottom: 0;
+
+                &::before {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }

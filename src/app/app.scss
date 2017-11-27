@@ -27,9 +27,26 @@ $amber-700: #FFA000;
 $amber-800: #FF8F00;
 $amber-900: #FF6F00;
 
+$red-500: #F44336;
+$red-600: #E53935;
+$red-700: #D32F2F;
+$red-800: #C62828;
+$red-900: #B71C1C;
+
+$grey-100: #F5F5F5;
+$grey-200: #EEEEEE;
+$grey-300: #E0E0E0;
+$grey-400: #BDBDBD;
+$grey-500: #9E9E9E;
+$grey-600: #757575;
+$grey-700: #616161;
+$grey-800: #424242;
+$grey-900: #212121;
+
 $default-background-color: $teal-900;
 $default-color: rgba(255,255,255,.87);
 $accent-color: $amber-900;
+$warn-color: $red-900;
 
 ion-content {
     .scroll-content {
