@@ -1,0 +1,12 @@
+page-expense-detail {
+    ion-card {
+        position: relative;
+
+        button.options {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: gray;
+        }
+    }
+}

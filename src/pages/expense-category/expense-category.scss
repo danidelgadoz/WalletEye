@@ -1,0 +1,113 @@
+page-expense-category {
+    .header {
+        flex: 1 1 100%;
+        max-width: 100%;
+        max-height: 30%;
+        background-color:  rgba($default-background-color, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 50%;
+        }
+
+        span.header__title {
+            color: $default-color;
+            font-size: 14px;
+        }
+        span.header__message {
+            margin-top: 8px;
+            color: $accent-color;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            ion-icon {
+                font-size: 24px;
+                font-weight: bold;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    .categorias {
+        flex: 1 1 100%;
+        max-width: 100%;
+        max-height: 70%;
+
+        display: flex;        
+        flex-direction: column;
+        @extend .bg-content;
+
+        .categorias__header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 16px;
+            border-bottom: 1px solid rgba(0,0,0,0.12);
+            @extend  .md-whiteframe-1dp;
+
+            .title {
+                font-size: 16px;
+            }
+
+            ion-icon {
+                position: absolute;
+                right: 16px;
+
+                &::before {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .categorias__list {
+            margin-top: 8px;
+            
+            ion-list button {
+                @extend .bg-content;
+
+                ion-label {
+                    margin: 8px 16px 8px 0;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    .bullet {
+                        background-color: rgb(25, 94, 83);
+                        border-radius: 50%;
+                        margin-right: 12px;
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    span:last-child {
+                        position: absolute;
+                        right: 0;
+                        color: $amber-500;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+
+                ion-icon {
+                    color: $amber-900;
+                    display: flex;
+                    align-items: center;
+
+                    &::before {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

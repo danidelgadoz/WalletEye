@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$teal-500: #009688;
+$teal-600: #00897B;
+$teal-700: #00796B;
+$teal-800: #00695C;
+$teal-900: #004D40;
+
+$amber-500: #FFC107;
+$amber-600: #FFB300;
+$amber-700: #FFA000;
+$amber-800: #FF8F00;
+$amber-900: #FF6F00;
+
+$default-background-color: $teal-900;
+$default-color: rgba(255,255,255,.87);
+$accent-color: $amber-900;
+
+ion-content {
+    .scroll-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+    }
+}
+
+// Helpers
+.md-whiteframe-1dp {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.bg-content {
+    color: $default-color;
+    background-color: $default-background-color;
+}
