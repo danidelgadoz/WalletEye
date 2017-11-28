@@ -65,3 +65,39 @@ ion-content {
     color: $default-color;
     background-color: $default-background-color;
 }
+
+// Modifiers
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    box-shadow: unset;
+    border-bottom-color: #dedede;
+}
+
+
+// components
+form {
+    ion-list {        
+        margin: 0;
+        padding: 16px;
+        
+        ion-item {
+            padding-left: 0 !important;
+
+            &.item-datetime,
+            &.item-select {
+                padding: 8px 0;
+            }
+            
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.form-submit{        
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-around;
+}

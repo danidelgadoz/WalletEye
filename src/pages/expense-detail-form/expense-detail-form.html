@@ -18,47 +18,51 @@
 
 
 <ion-content padding>
-  
-  <ion-list>
-    <ion-item style="padding-bottom: 16px;">
-      <ion-label>Fecha</ion-label>
-      <ion-datetime displayFormat="MMM DD, h:mm A" pickerFormat="DD MMM h mm A" [(ngModel)]="detail.fecha"></ion-datetime>
-    </ion-item>
+  <form name="expenseRegisterForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Fecha</ion-label>
+        <ion-datetime name="date" displayFormat="MMM DD, h:mm A" pickerFormat="DD MMM h mm A" [(ngModel)]="detail.fecha"></ion-datetime>
+      </ion-item>
 
-    <ion-item>
-      <ion-label>Categoria</ion-label>
-      <ion-select [(ngModel)]="categoryChoosedId">
-        <ion-option *ngFor="let c of categories" [value]="c.id">
-            {{ c.nombre }}
-        </ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item>
+        <ion-label>Categoria</ion-label>
+        <ion-select name="category" [(ngModel)]="categoryChoosedId">
+          <ion-option *ngFor="let c of categories" [value]="c.id">
+              {{ c.nombre }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label>Sub Categoria</ion-label>
-      <ion-select [(ngModel)]="detail.gasto_subcategorias_id">
-        <ion-option *ngFor="let sc of subcategories" [value]="sc.id">
-            {{ sc.nombre }}
-        </ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item>
+        <ion-label>Sub Categoria</ion-label>
+        <ion-select name="subcategoryId" [(ngModel)]="detail.gasto_subcategorias_id">
+          <ion-option *ngFor="let sc of subcategories" [value]="sc.id">
+              {{ sc.nombre }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="detail.detalle"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input name="detalle" type="text" [(ngModel)]="detail.detalle"></ion-input>
+      </ion-item>
 
-    
+      <ion-item>
+        <ion-label floating>Costo</ion-label>
+        <ion-input name="costo" type="number" [(ngModel)]="detail.costo"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Costo</ion-label>
-      <ion-input type="number" [(ngModel)]="detail.costo"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Observacion</ion-label>
+        <ion-input name="observacion" type="text" [(ngModel)]="detail.observacion"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Observacion</ion-label>
-      <ion-input type="text" [(ngModel)]="detail.observacion"></ion-input>
-    </ion-item>    
+      <ion-item>
+        <ion-label floating>hidden</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
 
-  </ion-list>
+    </ion-list>
+  </form>
 </ion-content>

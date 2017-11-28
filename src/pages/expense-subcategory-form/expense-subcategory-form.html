@@ -17,25 +17,31 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label>Categoria</ion-label>
-      <ion-select [(ngModel)]="subcategory.gasto_categorias_id">
-        <ion-option *ngFor="let c of categories" [selected]="c.id == subcategory.gasto_categorias_id" [value]="c.id">
-            {{ c.nombre }}
-        </ion-option>
-      </ion-select>
-    </ion-item>
+  <form name="subcategoryForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Categoria</ion-label>
+        <ion-select name="gasto_categorias_id" [(ngModel)]="subcategory.gasto_categorias_id">
+          <ion-option *ngFor="let c of categories" [selected]="c.id == subcategory.gasto_categorias_id" [value]="c.id">
+              {{ c.nombre }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="subcategory.nombre"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input name="nombre" type="text" [(ngModel)]="subcategory.nombre"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>Gasto promedio</ion-label>
-      <ion-input type="number" [(ngModel)]="subcategory.gasto_promedio"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label floating>Gasto promedio</ion-label>
+        <ion-input name="gasto_promedio" type="number" [(ngModel)]="subcategory.gasto_promedio"></ion-input>
+      </ion-item>
 
-  </ion-list>
+      <ion-item>
+        <ion-label floating>hidden</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>
