@@ -86,7 +86,11 @@ form {
 
             &.item-datetime,
             &.item-select {
-                padding: 8px 0;
+                margin: 12px 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
             }
             
             &:last-child {
