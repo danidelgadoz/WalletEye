@@ -15,38 +15,6 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-$teal-500: #009688;
-$teal-600: #00897B;
-$teal-700: #00796B;
-$teal-800: #00695C;
-$teal-900: #004D40;
-
-$amber-500: #FFC107;
-$amber-600: #FFB300;
-$amber-700: #FFA000;
-$amber-800: #FF8F00;
-$amber-900: #FF6F00;
-
-$red-500: #F44336;
-$red-600: #E53935;
-$red-700: #D32F2F;
-$red-800: #C62828;
-$red-900: #B71C1C;
-
-$grey-100: #F5F5F5;
-$grey-200: #EEEEEE;
-$grey-300: #E0E0E0;
-$grey-400: #BDBDBD;
-$grey-500: #9E9E9E;
-$grey-600: #757575;
-$grey-700: #616161;
-$grey-800: #424242;
-$grey-900: #212121;
-
-$default-background-color: $teal-900;
-$default-color: rgba(255,255,255,.87);
-$accent-color: $amber-900;
-$warn-color: $red-900;
 
 ion-content {
     .scroll-content {
@@ -59,11 +27,6 @@ ion-content {
 // Helpers
 .md-whiteframe-1dp {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
-}
-
-.bg-content {
-    color: $default-color;
-    background-color: $default-background-color;
 }
 
 // Modifiers
