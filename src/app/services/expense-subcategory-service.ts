@@ -16,13 +16,23 @@ export class ExpenseSubcategoryService {
   }
 
   listByCategory(idCategory: number): Observable<ExpenseSubcategory[]> {
-    let subcategories;
-    subcategories = JSON.parse(localStorage.gasto_subcategorias);
+    let subcategories = JSON.parse(localStorage.gasto_subcategorias);
+    let detalles = JSON.parse(localStorage.gasto_detalle);
     
-    subcategories = subcategories.filter(function(subcategory){      
+    subcategories = subcategories.filter(function(subcategory){
       return subcategory.gasto_categorias_id == idCategory;
     });
     
+    subcategories.map((subcategory) => {
+      subcategory.sumdetails = 0;
+      
+      detalles.filter(detalle => {
+          return detalle.gasto_subcategorias_id == subcategory.id;
+      }).map(detail => {
+        subcategory.sumdetails = subcategory.sumdetails + detail.costo;
+      });
+    });
+
     return Observable.of(subcategories);
   }
 

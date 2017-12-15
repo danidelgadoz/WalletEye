@@ -103,6 +103,14 @@ export class MyApp {
             "costo": 120.00,
             "observacion": "IPCNA y Sistemas Uni",
             "fecha": null
+        },
+        {
+            "id": 8,
+            "gasto_subcategorias_id": 1,
+            "detalle": "Metropolitano",
+            "costo": 1.70,
+            "observacion": "de jockey plaza al BCP",
+            "fecha": null
         }
     ];
 
@@ -110,6 +118,6 @@ export class MyApp {
     localStorage.setItem('gasto_subcategorias', JSON.stringify(gsc));
     localStorage.setItem('gasto_detalle', JSON.stringify(gd));
 
-    console.log(localStorage)
+    // console.log(localStorage)
   }
 }

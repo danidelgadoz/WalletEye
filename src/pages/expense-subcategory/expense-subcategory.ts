@@ -28,7 +28,7 @@ export class ExpenseSubcategoryPage {
               public navParams: NavParams,
               private ExpenseSubcategoryService: ExpenseSubcategoryService) {    
     this.ExpenseSubcategoryService.listByCategory(this.navParams.data).subscribe(data => {
-      this.subCategorylist = data;      
+      this.subCategorylist = data;
     });
   }
 

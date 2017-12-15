@@ -33,12 +33,12 @@ export class ExpenseCategoryPage {
   loadingData() {
     this.ExpenseCategoryService.list().subscribe(data => {
       this.categories = data;
-      console.log(this.categories);
+      // console.log(this.categories);
     });
   }
 
   goTo (category) {
-    console.log(category);
+    // console.log(category);
     this.navCtrl.push(ExpenseSubcategoryPage, category.id);
   };
 

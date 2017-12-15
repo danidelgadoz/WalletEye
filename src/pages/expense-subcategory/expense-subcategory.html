@@ -28,7 +28,7 @@
       <button class="subcategory" ion-item *ngFor="let item of subCategorylist" (click)="viewExpensesDetail(item)">
         <div class="subcategory__description">
           <h3 class="name">{{ item.nombre }}</h3>
-          <span class="amount">S/24.00</span>
+          <span class="amount">S/{{ item.sumdetails | number : '1.2' }}</span>
         </div>
         <ion-icon name="ios-arrow-forward" item-end></ion-icon>
       </button>
