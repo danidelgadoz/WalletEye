@@ -34,7 +34,7 @@
         <button ion-item *ngFor="let category of categories" (click)="goTo(category)">
           <div class="bullet">{{ category.nombre | slice:0:1 }}</div>
           <span class="name">{{ category.nombre }}</span>
-          <span class="amount">S/24.00</span>
+          <span class="amount">S/{{ category.sumdetails | number : '1.2' }}</span>
           <ion-icon name="ios-arrow-forward" item-end></ion-icon>
         </button> 
       </ion-list>

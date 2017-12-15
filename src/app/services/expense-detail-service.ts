@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { ExpenseSubcategory } from '../models/expense-subcategory';
 import { ExpenseDetail } from '../models/expense-detail';
 
 @Injectable()
@@ -10,10 +9,10 @@ export class ExpenseDetailService {
       
   }
 
-  list() : Observable<ExpenseSubcategory[]> {
-    let subcategories;
-    subcategories = JSON.parse(localStorage.gasto_categorias);
-    return Observable.of(subcategories);
+  list() : Observable<ExpenseDetail[]> {
+    let gasto_detalle;
+    gasto_detalle = JSON.parse(localStorage.gasto_detalle);
+    return Observable.of(gasto_detalle);
   }
 
   listBySubcategory(id: number): Observable<ExpenseDetail[]> {
