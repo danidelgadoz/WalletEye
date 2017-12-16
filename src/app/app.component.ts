@@ -54,7 +54,7 @@ export class MyApp {
             "detalle": "Taxi",
             "costo": 20.00,
             "observacion": "de Pte. nuevo al jockey plaza",
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 2,
@@ -62,7 +62,7 @@ export class MyApp {
             "detalle": "1/4 Pollo a la brasa + bebidas",
             "costo": 25.00,
             "observacion": "Don belisario",
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 3,
@@ -70,7 +70,7 @@ export class MyApp {
             "detalle": "Servicio de vigilancia - Agosto 2017",
             "costo": 25.00,
             "observacion": null,
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 4,
@@ -78,7 +78,7 @@ export class MyApp {
             "detalle": "Semana de mi papá",
             "costo": 150.00,
             "observacion": null,
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 5,
@@ -86,7 +86,7 @@ export class MyApp {
             "detalle": "Chupeta en el local del cumpa",
             "costo": 30.00,
             "observacion": null,
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 6,
@@ -94,7 +94,7 @@ export class MyApp {
             "detalle": "Casaca de vestir",
             "costo": 200.00,
             "observacion": null,
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 7,
@@ -102,7 +102,7 @@ export class MyApp {
             "detalle": "Certificados",
             "costo": 120.00,
             "observacion": "IPCNA y Sistemas Uni",
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         },
         {
             "id": 8,
@@ -110,7 +110,7 @@ export class MyApp {
             "detalle": "Metropolitano",
             "costo": 1.70,
             "observacion": "de jockey plaza al BCP",
-            "fecha": null
+            "fecha": "2017-12-16T04:20:43.940Z"
         }
     ];
 

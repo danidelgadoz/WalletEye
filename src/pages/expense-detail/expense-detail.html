@@ -31,8 +31,8 @@
           <h3 class="expense__description">{{ detail.detalle }}</h3>
           
           <div>
-            <span class="expense__amount">S/ {{ detail.costo | number : '1.2' }}</span>
-            <span class="expense__date">12/10/2017</span>
+            <span class="expense__amount">S/ {{ detail.costo | number: '1.2' }}</span>
+            <span class="expense__date">{{ detail.fecha | date: 'M/d/yy, h:mm a' }}</span>
           </div>
 
           <ion-icon name="ios-arrow-forward" item-end></ion-icon>

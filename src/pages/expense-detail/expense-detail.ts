@@ -32,6 +32,7 @@ export class ExpenseDetailPage {
 
     this.ExpenseDetailService.listBySubcategory(this.navParams.get('subcategoryId')).subscribe(data => {
       this.details = data;
+      console.log(this.details)
     });
   }
 

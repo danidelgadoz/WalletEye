@@ -9,6 +9,7 @@ import { ExpenseCategory as Category } from '../../app/models/expense-category';
 import { ExpenseSubcategory as Subcategory } from '../../app/models/expense-subcategory';
 import { ExpenseDetail as Detail } from '../../app/models/expense-detail';
 
+import moment from 'moment';
 
 /**
  * Generated class for the ExpenseDetailFormPage page.
@@ -47,15 +48,16 @@ export class ExpenseDetailFormPage {
       });
     });
 
-    this.detail.fecha = new Date().toISOString();
-    
+    this.detail.fecha = moment().format();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExpenseDetailFormPage');
   }
 
-  create() {   
+  create() {
+    this.detail.fecha = moment().format(this.detail.fecha)
+    
     this.ExpenseDetailService.create(this.detail).subscribe(data => {      
       this.navCtrl.push(ExpenseDetailPage, {'subcategoryId': data.gasto_subcategorias_id});
     });

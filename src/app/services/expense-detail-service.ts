@@ -31,7 +31,6 @@ export class ExpenseDetailService {
     let newDetail: ExpenseDetail = detail;    
 
     newDetail.id = (new Date()).getTime();
-    newDetail.fecha = new Date();
     details.push(newDetail);
     localStorage.setItem('gasto_detalle', JSON.stringify(details));
     
