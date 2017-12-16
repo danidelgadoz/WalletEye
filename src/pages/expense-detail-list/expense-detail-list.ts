@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PopoverController} from 'ionic-angular';
+import { ExpenseDetailPage } from '../expense-detail/expense-detail';
 import { ExpenseDetailFormPage } from '../expense-detail-form/expense-detail-form';
 import { ExpenseCategoryPage } from '../expense-category/expense-category';
 
@@ -39,6 +40,10 @@ export class ExpenseDetailListPage {
 
   add() {    
     this.navCtrl.push(ExpenseDetailFormPage, {'subcategoryId': this.navParams.get('subcategoryId')});
+  }
+
+  goToDetail(detail: Detail) {
+    this.navCtrl.push(ExpenseDetailPage, {'detailId': detail.id});
   }
 
   openPopover(myEvent) {

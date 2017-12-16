@@ -26,6 +26,16 @@ export class ExpenseDetailService {
     return Observable.of(expenseDetails);
   }
 
+  getById(id: number): Observable<ExpenseDetail> {
+    let expenseDetails = JSON.parse(localStorage.gasto_detalle);
+    
+    let expenseDetail = expenseDetails.find(function(detail){         
+      return detail.id == id;
+    });
+    
+    return Observable.of(expenseDetail);
+  }
+
   create(detail: ExpenseDetail): Observable<ExpenseDetail> {
     let details: ExpenseDetail[] = JSON.parse(localStorage.gasto_detalle); 
     let newDetail: ExpenseDetail = detail;    

@@ -11,6 +11,7 @@ import { ExpenseSubcategoryPage } from '../pages/expense-subcategory/expense-sub
 import { ExpenseSubcategoryFormPage } from '../pages/expense-subcategory-form/expense-subcategory-form';
 import { ExpenseDetailListPage } from '../pages/expense-detail-list/expense-detail-list';
 import { ExpenseDetailFormPage } from '../pages/expense-detail-form/expense-detail-form';
+import { ExpenseDetailPage } from '../pages/expense-detail/expense-detail';
 
 import { ExpenseCategoryService } from './services/expense-category-service';
 import { ExpenseSubcategoryService } from './services/expense-subcategory-service';
@@ -24,7 +25,8 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     ExpenseSubcategoryPage,
     ExpenseSubcategoryFormPage,    
     ExpenseDetailListPage,
-    ExpenseDetailFormPage
+    ExpenseDetailFormPage,
+    ExpenseDetailPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     ExpenseSubcategoryPage,
     ExpenseSubcategoryFormPage,    
     ExpenseDetailListPage,
-    ExpenseDetailFormPage
+    ExpenseDetailFormPage,
+    ExpenseDetailPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,55 @@
+page-expense-detail {
+    .wrapper {
+        padding: 24px;
+        padding-top: 20px;
+        color: $grey-600;
+    }
+    .indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__avatar {
+            width: 64px;
+        }
+
+        &__observation {
+            margin-top: 4px;
+        }
+    }
+
+    .expense {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 24px;        
+        
+        &__name {
+            text-align: center;
+            font-size: 24px;
+            margin: 0 16px;
+            text-transform: uppercase;
+            color: $grey-700;
+        }
+
+        &__observation {
+            margin: 0;
+        }
+
+        &__amount {
+            font-size: 56px;
+            font-weight: 400;
+            color: $grey-700;
+            margin: 40px 0 56px 0;
+
+            &:before {
+                content: 'S/ ';
+                font-size: 22px;
+            }
+        }
+
+        &__date {
+            font-size: 12px;
+        }
+    }
+}
