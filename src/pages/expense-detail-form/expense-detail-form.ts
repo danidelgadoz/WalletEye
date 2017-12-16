@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ExpenseDetailPage } from '../expense-detail/expense-detail';
+import { ExpenseDetailListPage } from '../expense-detail-list/expense-detail-list';
 
 import { ExpenseDetailService } from '../../app/services/expense-detail-service';
 import { ExpenseCategoryService } from '../../app/services/expense-category-service';
@@ -57,7 +57,7 @@ export class ExpenseDetailFormPage {
     this.detail.fecha = moment().format(this.detail.fecha)
     
     this.ExpenseDetailService.create(this.detail).subscribe(data => {      
-      this.navCtrl.push(ExpenseDetailPage, {'subcategoryId': data.gasto_subcategorias_id});
+      this.navCtrl.push(ExpenseDetailListPage, {'subcategoryId': data.gasto_subcategorias_id});
     });
   }
 

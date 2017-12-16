@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ExpenseCategoryPage } from '../pages/expense-category/expense-category';
 import { ExpenseSubcategoryPage } from '../pages/expense-subcategory/expense-subcategory';
 import { ExpenseSubcategoryFormPage } from '../pages/expense-subcategory-form/expense-subcategory-form';
-import { ExpenseDetailPage } from '../pages/expense-detail/expense-detail';
+import { ExpenseDetailListPage } from '../pages/expense-detail-list/expense-detail-list';
 import { ExpenseDetailFormPage } from '../pages/expense-detail-form/expense-detail-form';
 
 import { ExpenseCategoryService } from './services/expense-category-service';
@@ -23,7 +23,7 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     ExpenseCategoryPage,
     ExpenseSubcategoryPage,
     ExpenseSubcategoryFormPage,    
-    ExpenseDetailPage,
+    ExpenseDetailListPage,
     ExpenseDetailFormPage
   ],
   imports: [
@@ -37,7 +37,7 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     ExpenseCategoryPage,
     ExpenseSubcategoryPage,
     ExpenseSubcategoryFormPage,    
-    ExpenseDetailPage,
+    ExpenseDetailListPage,
     ExpenseDetailFormPage
   ],
   providers: [

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ExpenseSubcategoryFormPage } from '../expense-subcategory-form/expense-subcategory-form';
-import { ExpenseDetailPage } from '../expense-detail/expense-detail';
+import { ExpenseDetailListPage } from '../expense-detail-list/expense-detail-list';
 import { ExpenseCategoryPage } from '../expense-category/expense-category';
 
 
@@ -40,7 +40,7 @@ export class ExpenseSubcategoryPage {
   }
 
   viewExpensesDetail(item) {
-    this.navCtrl.push(ExpenseDetailPage, {'subcategoryId': item.id});
+    this.navCtrl.push(ExpenseDetailListPage, {'subcategoryId': item.id});
   }
 
   goBackToCategories() {

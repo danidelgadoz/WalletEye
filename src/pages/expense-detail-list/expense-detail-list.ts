@@ -17,10 +17,10 @@ import { ExpenseDetail as Detail } from '../../app/models/expense-detail';
 
 @IonicPage()
 @Component({
-  selector: 'page-expense-detail',
-  templateUrl: 'expense-detail.html',
+  selector: 'page-expense-detail-list',
+  templateUrl: 'expense-detail-list.html',
 })
-export class ExpenseDetailPage {
+export class ExpenseDetailListPage {
   subCategory : Subcategory;
   details: Detail[];
 
