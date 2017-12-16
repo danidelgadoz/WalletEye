@@ -51,9 +51,7 @@ export class ExpenseDetailFormPage {
     this.detail.fecha = moment().format();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpenseDetailFormPage');
-  }
+  ionViewDidLoad() {}
 
   create() {
     this.detail.fecha = moment().format(this.detail.fecha)

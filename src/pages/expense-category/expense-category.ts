@@ -26,19 +26,15 @@ export class ExpenseCategoryPage {
       this.loadingData();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpensePage');    
-  }
+  ionViewDidLoad() {}
 
   loadingData() {
     this.ExpenseCategoryService.list().subscribe(data => {
       this.categories = data;
-      // console.log(this.categories);
     });
   }
 
   goTo (category) {
-    // console.log(category);
     this.navCtrl.push(ExpenseSubcategoryPage, category.id);
   };
 

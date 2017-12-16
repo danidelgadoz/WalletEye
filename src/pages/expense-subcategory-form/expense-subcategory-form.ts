@@ -35,14 +35,10 @@ export class ExpenseSubcategoryFormPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpenseSubcategoryFormPage');
-  }
+  ionViewDidLoad() {}
 
   create() {
-    console.log(this.subcategory)
     this.ExpenseSubcategoryService.create(this.subcategory).subscribe(data => {
-      console.log(data);
       this.navCtrl.push(ExpenseSubcategoryPage, data.gasto_categorias_id);
     });  
   }

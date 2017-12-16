@@ -32,13 +32,10 @@ export class ExpenseDetailPage {
 
     this.ExpenseDetailService.listBySubcategory(this.navParams.get('subcategoryId')).subscribe(data => {
       this.details = data;
-      console.log(this.details)
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpenseDetailPage');
-  }
+  ionViewDidLoad() {}
 
   add() {    
     this.navCtrl.push(ExpenseDetailFormPage, {'subcategoryId': this.navParams.get('subcategoryId')});

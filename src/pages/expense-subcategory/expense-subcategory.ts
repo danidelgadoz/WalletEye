@@ -33,7 +33,6 @@ export class ExpenseSubcategoryPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ExpenseSubcategoryPage');
   }
   
   add() {
@@ -41,12 +40,10 @@ export class ExpenseSubcategoryPage {
   }
 
   viewExpensesDetail(item) {
-    console.log(item)
     this.navCtrl.push(ExpenseDetailPage, {'subcategoryId': item.id});
   }
 
   goBackToCategories() {
-    console.log("goBackToCategories..")
     this.navCtrl.push(ExpenseCategoryPage);
   };
 
