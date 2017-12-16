@@ -55,6 +55,7 @@ page-expense-detail {
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-end;
+                    white-space: nowrap;
 
                     span.expense__amount {
                         color: $red-500;
