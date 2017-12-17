@@ -21,8 +21,8 @@ export class ExpenseDetailPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private ExpenseDetailService: ExpenseDetailService) {
-    this.ExpenseDetailService.getById(this.navParams.get('detailId')).subscribe(data => {
+              private expenseDetailService: ExpenseDetailService) {
+    this.expenseDetailService.getById(this.navParams.get('detailId')).subscribe(data => {
       this.detail = data;
     });
   }

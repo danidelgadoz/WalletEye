@@ -23,23 +23,23 @@ import { ExpenseDetail as Detail } from '../../app/models/expense-detail';
   templateUrl: 'expense-detail-list.html',
 })
 export class ExpenseDetailListPage {
-  subCategory : Subcategory;
+  subCategory: Subcategory;
   details: Detail[];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public popoverCtrl: PopoverController,
-              private ExpenseDetailService: ExpenseDetailService) {
+              private expenseDetailService: ExpenseDetailService) {
     this.subCategory = this.navParams.get('subcategory');
-    
-    this.ExpenseDetailService.listBySubcategory(this.subCategory.id).subscribe(data => {
+
+    this.expenseDetailService.listBySubcategory(this.subCategory.id).subscribe(data => {
       this.details = data;
     });
   }
 
   ionViewDidLoad() {}
 
-  add() {    
+  add() {
     this.navCtrl.push(ExpenseDetailFormPage, {'subcategory': this.subCategory});
   }
 
@@ -48,7 +48,7 @@ export class ExpenseDetailListPage {
   }
 
   openPopover(myEvent) {
-    let popover = this.popoverCtrl.create(ExpenseCategoryPage);
+    const popover = this.popoverCtrl.create(ExpenseCategoryPage);
     popover.present({
       ev: myEvent
     });

@@ -22,19 +22,19 @@ import { ExpenseSubcategory as Subcategory } from '../../app/models/expense-subc
   templateUrl: 'expense-subcategory.html',
 })
 export class ExpenseSubcategoryPage {
-  subCategorylist : Subcategory[]; 
+  subCategorylist: Subcategory[];
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private ExpenseSubcategoryService: ExpenseSubcategoryService) {
-    this.ExpenseSubcategoryService.listByCategory(this.navParams.data).subscribe(data => {
+              private expenseSubcategoryService: ExpenseSubcategoryService) {
+    this.expenseSubcategoryService.listByCategory(this.navParams.data).subscribe(data => {
       this.subCategorylist = data;
     });
   }
 
   ionViewDidLoad() {
   }
-  
+
   add() {
     this.navCtrl.push(ExpenseSubcategoryFormPage, this.navParams.data);
   }
@@ -45,6 +45,6 @@ export class ExpenseSubcategoryPage {
 
   goBackToCategories() {
     this.navCtrl.push(ExpenseCategoryPage);
-  };
+  }
 
 }

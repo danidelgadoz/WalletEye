@@ -29,31 +29,31 @@ export class ExpenseDetailFormPage {
   categories: Category[];
   categoryChoosedId: number;
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private ExpenseCategoryService: ExpenseCategoryService,
-              private ExpenseSubcategoryService: ExpenseSubcategoryService,
-              private ExpenseDetailService: ExpenseDetailService) {            
+              private expenseCategoryService: ExpenseCategoryService,
+              private expenseSubcategoryService: ExpenseSubcategoryService,
+              private expenseDetailService: ExpenseDetailService) {
 
     this.categoryChoosedId = navParams.get('subcategory').gasto_categorias_id;
     this.detail.gasto_subcategorias_id = navParams.get('subcategory').id;
     this.detail.fecha = moment().format();
-    
-    this.ExpenseCategoryService.list().subscribe(data => {
-      this.categories = data;
-    });    
 
-    this.ExpenseSubcategoryService.listByCategory(this.categoryChoosedId).subscribe(data => {        
-      this.subcategories = data;       
+    this.expenseCategoryService.list().subscribe(data => {
+      this.categories = data;
+    });
+
+    this.expenseSubcategoryService.listByCategory(this.categoryChoosedId).subscribe(data => {
+      this.subcategories = data;
     });
   }
 
   ionViewDidLoad() {}
 
   create() {
-    this.detail.fecha = moment().format(this.detail.fecha)
-    
-    this.ExpenseDetailService.create(this.detail).subscribe(data => {      
+    this.detail.fecha = moment().format(this.detail.fecha);
+
+    this.expenseDetailService.create(this.detail).subscribe(data => {
       this.navCtrl.push(ExpenseDetailListPage, {'subcategory': this.navParams.get('subcategory')});
     });
   }

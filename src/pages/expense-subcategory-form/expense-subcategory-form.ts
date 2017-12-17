@@ -24,12 +24,12 @@ export class ExpenseSubcategoryFormPage {
   category: Category;
   subcategory: Subcategory = new Subcategory();
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private ExpenseSubcategoryService: ExpenseSubcategoryService,
-              private ExpenseCategoryService: ExpenseCategoryService) {    
+              private expenseSubcategoryService: ExpenseSubcategoryService,
+              private expenseCategoryService: ExpenseCategoryService) {
 
-    this.ExpenseCategoryService.list().subscribe(data => {
+    this.expenseCategoryService.list().subscribe(data => {
       this.categories = data;
       this.subcategory.gasto_categorias_id = navParams.data;
     });
@@ -38,9 +38,9 @@ export class ExpenseSubcategoryFormPage {
   ionViewDidLoad() {}
 
   create() {
-    this.ExpenseSubcategoryService.create(this.subcategory).subscribe(data => {
+    this.expenseSubcategoryService.create(this.subcategory).subscribe(data => {
       this.navCtrl.push(ExpenseSubcategoryPage, data.gasto_categorias_id);
-    });  
+    });
   }
 
   cancel() {

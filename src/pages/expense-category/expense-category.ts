@@ -22,20 +22,20 @@ export class ExpenseCategoryPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private ExpenseCategoryService: ExpenseCategoryService) {
+    private expenseCategoryService: ExpenseCategoryService) {
       this.loadingData();
   }
 
   ionViewDidLoad() {}
 
   loadingData() {
-    this.ExpenseCategoryService.list().subscribe(data => {
+    this.expenseCategoryService.list().subscribe(data => {
       this.categories = data;
     });
   }
 
   goTo (category) {
     this.navCtrl.push(ExpenseSubcategoryPage, category.id);
-  };
+  }
 
 }
