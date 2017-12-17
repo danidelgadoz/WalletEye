@@ -23,7 +23,7 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     HomePage,
     ExpenseCategoryPage,
     ExpenseSubcategoryPage,
-    ExpenseSubcategoryFormPage,    
+    ExpenseSubcategoryFormPage,
     ExpenseDetailListPage,
     ExpenseDetailFormPage,
     ExpenseDetailPage
@@ -38,7 +38,7 @@ import { ExpenseDetailService } from './services/expense-detail-service';
     HomePage,
     ExpenseCategoryPage,
     ExpenseSubcategoryPage,
-    ExpenseSubcategoryFormPage,    
+    ExpenseSubcategoryFormPage,
     ExpenseDetailListPage,
     ExpenseDetailFormPage,
     ExpenseDetailPage
