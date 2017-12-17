@@ -4,6 +4,7 @@ import { PopoverController} from 'ionic-angular';
 import { ExpenseDetailPage } from '../expense-detail/expense-detail';
 import { ExpenseDetailFormPage } from '../expense-detail-form/expense-detail-form';
 import { ExpenseCategoryPage } from '../expense-category/expense-category';
+import { ExpenseSubcategoryPage } from '../expense-subcategory/expense-subcategory';
 
 import { ExpenseDetailService } from '../../app/services/expense-detail-service';
 import { ExpenseSubcategory as Subcategory } from '../../app/models/expense-subcategory';
@@ -51,6 +52,10 @@ export class ExpenseDetailListPage {
     popover.present({
       ev: myEvent
     });
+  }
+
+  goBackToSubCategories() {
+    this.navCtrl.push(ExpenseSubcategoryPage, this.navParams.get('subcategoryId'));
   }
 
 }

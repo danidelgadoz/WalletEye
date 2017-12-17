@@ -41,6 +41,11 @@ ion-content {
     font-size: 1.7rem;
 }
 
+ion-header ion-navbar ion-buttons[left] button {
+    margin: 0 6px !important;
+    min-width: 44px !important;
+}
+
 
 // components
 form {
