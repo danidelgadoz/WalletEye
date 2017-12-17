@@ -35,20 +35,17 @@ export class ExpenseDetailFormPage {
               private ExpenseSubcategoryService: ExpenseSubcategoryService,
               private ExpenseDetailService: ExpenseDetailService) {            
 
+    this.categoryChoosedId = navParams.get('subcategory').gasto_categorias_id;
+    this.detail.gasto_subcategorias_id = navParams.get('subcategory').id;
+    this.detail.fecha = moment().format();
+    
     this.ExpenseCategoryService.list().subscribe(data => {
       this.categories = data;
+    });    
+
+    this.ExpenseSubcategoryService.listByCategory(this.categoryChoosedId).subscribe(data => {        
+      this.subcategories = data;       
     });
-
-    this.ExpenseSubcategoryService.getById(navParams.get('subcategoryId')).subscribe(data => {      
-      this.categoryChoosedId = data.gasto_categorias_id;
-      this.detail.gasto_subcategorias_id = data.id;
-
-      this.ExpenseSubcategoryService.listByCategory(data.gasto_categorias_id).subscribe(data => {        
-        this.subcategories = data;       
-      });
-    });
-
-    this.detail.fecha = moment().format();
   }
 
   ionViewDidLoad() {}
@@ -57,7 +54,7 @@ export class ExpenseDetailFormPage {
     this.detail.fecha = moment().format(this.detail.fecha)
     
     this.ExpenseDetailService.create(this.detail).subscribe(data => {      
-      this.navCtrl.push(ExpenseDetailListPage, {'subcategoryId': data.gasto_subcategorias_id});
+      this.navCtrl.push(ExpenseDetailListPage, {'subcategory': this.navParams.get('subcategory')});
     });
   }
 

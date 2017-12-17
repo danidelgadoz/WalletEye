@@ -30,9 +30,9 @@ export class ExpenseDetailListPage {
               public navParams: NavParams,
               public popoverCtrl: PopoverController,
               private ExpenseDetailService: ExpenseDetailService) {
-    this.subCategory = navParams.data;    
-
-    this.ExpenseDetailService.listBySubcategory(this.navParams.get('subcategoryId')).subscribe(data => {
+    this.subCategory = this.navParams.get('subcategory');
+    
+    this.ExpenseDetailService.listBySubcategory(this.subCategory.id).subscribe(data => {
       this.details = data;
     });
   }
@@ -40,7 +40,7 @@ export class ExpenseDetailListPage {
   ionViewDidLoad() {}
 
   add() {    
-    this.navCtrl.push(ExpenseDetailFormPage, {'subcategoryId': this.navParams.get('subcategoryId')});
+    this.navCtrl.push(ExpenseDetailFormPage, {'subcategory': this.subCategory});
   }
 
   goToDetail(detail: Detail) {
@@ -55,7 +55,7 @@ export class ExpenseDetailListPage {
   }
 
   goBackToSubCategories() {
-    this.navCtrl.push(ExpenseSubcategoryPage, this.navParams.get('subcategoryId'));
+    this.navCtrl.push(ExpenseSubcategoryPage, this.subCategory.gasto_categorias_id);
   }
 
 }

@@ -26,7 +26,7 @@ export class ExpenseSubcategoryPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
-              private ExpenseSubcategoryService: ExpenseSubcategoryService) {    
+              private ExpenseSubcategoryService: ExpenseSubcategoryService) {
     this.ExpenseSubcategoryService.listByCategory(this.navParams.data).subscribe(data => {
       this.subCategorylist = data;
     });
@@ -40,7 +40,7 @@ export class ExpenseSubcategoryPage {
   }
 
   viewExpensesDetail(item) {
-    this.navCtrl.push(ExpenseDetailListPage, {'subcategoryId': item.id});
+    this.navCtrl.push(ExpenseDetailListPage, {'subcategory': item});
   }
 
   goBackToCategories() {
